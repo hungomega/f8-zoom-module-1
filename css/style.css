@@ -65,30 +65,8 @@ html {
 }
 /* menu */
 
-.header-menu-container {
-    display: flex;
-    gap: 53px;
-    font-size: 1.6rem;
-    align-items: center;
-    cursor: pointer;
-}
 
-.header-menu-container li  {
-    list-style: none;
-}
 
-.header-menu-container a {
-    color: var(--Dark);
-    text-decoration: none;
-}
-
-.nav-item {
-    font-family: "Manrope";
-    padding: 20px 0;
-}
-.nav-item a:hover {
-    color: var(--orange);
-}
 
 /* call */
 .header-call-container {
@@ -1385,7 +1363,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding 30px;
+    padding: 30px;
 }
 
 .hero span {
