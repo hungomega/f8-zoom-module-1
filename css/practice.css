@@ -1,0 +1,93 @@
+/* practice area */
+.practice > .container {
+    width: 1170px;
+    padding: 150px 0;
+}
+.practice {
+    background: var(--White);
+    /* min-height: 170vh; */
+}
+
+.practice-container-content > span {
+    font-family: "Roboto Slab";
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 30px;
+    color: var(--Grey);
+}
+
+.practice-container-content > h1 {
+    font-family: "Roboto Slab";
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 52px;
+    margin-top: 6px;
+    color: var(--Dark);
+}
+
+.practice-container-content > p {
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 30px;
+    margin-top: 18px;
+    color: var(--Grey);
+}
+.practice-container-content {
+    text-align: center;
+}
+
+.practice > .container > .row {
+    padding-top: 150px;
+    justify-content: center;
+}
+
+.practice-item {
+    position: relative;
+}
+
+.practice-item > .practice-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 330px;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.practice-btn {
+    display: inline-flex;
+    padding: 15px 35px;
+
+    background: var(--White);
+
+    color: var(--Dark);
+
+    text-decoration: none; /* Bỏ gạch chân */
+    /* B1 */
+    font-family: "Manrope";
+    font-size: 1.8em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 166.667% */
+
+    transition: 0.4s;
+}
+
+.practice-btn:hover {
+    background: var(--orange);
+    color: var(--White);
+}
+.practice-img-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.practice-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
