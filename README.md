@@ -1,69 +1,109 @@
-Giới thiệu
-Sau khi hoàn thành toàn bộ module 1, các bạn đã nắm vững gần như đầy đủ các kiến thức quan trọng nhất trong HTML và CSS để có thể xây dựng giao diện một trang web. Dự án cuối module sẽ là cơ hội để bạn tổng hợp và vận dụng toàn bộ kiến thức đã học, bao gồm:
+# F8 Zoom - Module 1: Law Firm Website
 
-Cấu trúc HTML chuẩn, sử dụng thẻ semantic.
-Kỹ năng CSS: đơn vị, màu sắc, background, font chữ, biến CSS, flexbox, grid layout, animation.
-Responsive đa thiết bị.
-Kỹ thuật xử lý form, checkbox, table, video, v.v.
-Sử dụng Sass và Grid System 12 columns để tối ưu hoá.
-Mục tiêu: Tự tay xây dựng giao diện hoàn chỉnh của một website dựa trên thiết kế đã cho. Đây cũng là bước đệm quan trọng để bạn tự tin bước sang module JavaScript tiếp theo.
+Dự án tổng kết Module 1 (HTML & CSS) - xây dựng giao diện website **Law Firm** dựa trên thiết kế Figma, sử dụng HTML chuẩn semantic, Sass, Grid System 12 columns và Responsive Desktop-first.
 
-#Danh sách thiết kế
-Chọn một trong hai dự án dưới đây để thực hiện:
+## 🚀 Demo
 
-Truy cập link rồi nhấn “Request access” và chờ khoảng 10–15 giây để hệ thống tự duyệt.
+- **GitHub Pages:** https://<username>.github.io/f8-zoom-module-1/
 
-#1. Law Firm Website
-Xem file thiết kế trên Figma
+## 🛠️ Công nghệ sử dụng
 
-Cần làm tối thiểu 5 trang, lưu ý tên file:
+- HTML5 (semantic tags)
+- Sass/SCSS
+- Grid System 12 columns (tự viết, không dùng framework ngoài)
+- Vite (build tool) + vite-plugin-ejs
+- Responsive: Desktop / Tablet / Mobile
 
-Home (/index.html)
-About (/about.html)
-Practice (/practice.html)
-Blog (/blog.html)
-Contact (/contact.html)
-Với những trang có nhiều phiên bản, bạn chỉ cần chọn một phiên bản để làm. Ví dụ: trang Home có 5 bản thiết kế thì chọn 1 trong 5.
+## 📁 Cấu trúc thư mục
 
-#2. Nap Tien Website
-Xem file thiết kế trên Figma
+```
+f8-zoom-module-1/
+├── src/                    # Source Sass (scss), sẽ được biên dịch ra css
+│   ├── scss/
+│   │   ├── base/           # reset, biến màu, biến font,...
+│   │   ├── layout/         # grid, responsive
+│   │   ├── components/     # các thành phần dùng chung (button, card,...)
+│   │   └── pages/          # style riêng cho từng trang
+│   └── style.scss          # file scss gốc import tất cả
+├── css/                    # CSS đã build ra từ Sass (được import trong HTML)
+│   ├── reset.css
+│   ├── style.css
+│   ├── grid.css
+│   └── responsive.css
+├── img/                    # Hình ảnh gốc dùng trong dự án
+├── favicon/                 # Favicon website
+├── public/                 # Static assets khác (nếu có)
+├── dist/                   # Thư mục build output (không commit, hoặc chỉ dùng để deploy)
+├── index.html              # Trang chủ (Home)
+├── about.html               # Trang giới thiệu (About)
+├── practice.html            # Trang lĩnh vực hành nghề (Practice)
+├── blog.html                 # Trang Blog
+├── contact.html              # Trang liên hệ (Contact)
+├── vite.config.js
+├── package.json
+└── .gitignore
+```
 
-Cần làm tối thiểu 6 trang, lưu ý tên file:
+> **Lưu ý:** Ảnh sử dụng trong dự án đã được resize (tối đa x2 kích thước hiển thị CSS) và nén bằng TinyPNG trước khi đưa vào thư mục `img/`.
 
-Đăng nhập (/sign-in.html)
-Đăng ký (/sign-up.html)
-Trang chủ (/index.html)
-Sản phẩm (/collection.html)
-Thanh toán online (/payment.html)
-Tài khoản người dùng (/account.html)
-#Yêu cầu chung
-Tạo repo tên: f8-zoom-module-1
-Cấu trúc HTML chuẩn, dùng thẻ semantic (Check với W3C Markup Validation không được có lỗi hoặc cảnh báo).
-CSS dùng rem, đặt biến màu sắc, font chữ chuẩn thiết kế, áp dụng thêm transition phù hợp.
-Đặt tên class tự do (khuyến khích BEM nhưng không bắt buộc).
-Responsive theo Desktop-first: Desktop, Tablet, Mobile.
-Sử dụng Sass và Grid System 12 columns.
-Không dùng thư viện CSS bên ngoài như Bootstrap, Tailwind,…
-Không viết CSS inline hoặc nhúng <style> vào file HTML.
-Tách rõ cấu trúc thư mục: các file HTML nằm ở thư mục gốc, ảnh, font chữ… để trong thư mục assets (/assets/fonts, /assets/images, …).
-Ảnh sử dụng phải được tải về và lưu trong thư mục assets/images, không dùng link ảnh từ bên ngoài.
-Các hình ảnh cần được resize (tối đa x2 kích thước CSS) với Image Resizer và được nén với TinyPNG.
-Xoá hết các file không liên quan, chỉ giữ lại những file cần thiết.
-Đảm bảo đường dẫn tương đối hoạt động đúng khi deploy lên GitHub Pages (sử dụng ./ thay vì /).
-Không để lại file trống hoặc file chưa hoàn thiện trong dự án.
-Các đoạn mã CSS/HTML phải được format gọn gàng, dễ đọc.
-Trước khi nộp, hãy kiểm tra lại xem giao diện đã giống thiết kế chưa, đã responsive đủ chưa.
-#Checklist trước khi nộp bài
-[ ] Đã tạo đủ số trang HTML theo thiết kế.
-[ ] Đã đặt đúng tên file như yêu cầu.
-[ ] Đã chia folder đúng cấu trúc (assets/css, assets/images, …).
-[ ] Không có lỗi hoặc warning khi kiểm tra với W3C.
-[ ] Đã resize và nén ảnh trước khi đưa vào project.
-[ ] Giao diện hiển thị đúng thiết kế.
-[ ] Responsive tốt trên Desktop, Tablet, Mobile.
-[ ] Không dùng CSS framework ngoài.
-[ ] Không dùng ảnh từ link ngoài.
-[ ] Không để lại file trống, file thừa hoặc chưa dùng.
-[ ] Mã nguồn rõ ràng, dễ đọc, được format hợp lý.
-[ ] Push code đầy đủ lên Github.
-[ ] Deploy thành công với Github Pages.
+## 📄 Danh sách trang
+
+| Trang | File |
+|---|---|
+| Home | `/index.html` |
+| About | `/about.html` |
+| Practice | `/practice.html` |
+| Blog | `/blog.html` |
+| Contact | `/contact.html` |
+
+## ⚙️ Cài đặt và chạy dự án
+
+```bash
+# Cài đặt các gói phụ thuộc
+npm install
+
+# Chạy dự án ở môi trường dev (Vite dev server)
+npm run dev
+
+# Build dự án ra thư mục dist
+npm run build
+
+# Deploy lên GitHub Pages
+npm run deploy
+```
+
+## ✅ Yêu cầu đã hoàn thành
+
+- [x] Cấu trúc HTML chuẩn, sử dụng thẻ semantic, validate qua W3C Markup Validation không lỗi/cảnh báo
+- [x] CSS dùng đơn vị `rem`, khai báo biến màu sắc & font chữ theo thiết kế
+- [x] Áp dụng `transition` phù hợp cho các hiệu ứng tương tác
+- [x] Sử dụng Sass và Grid System 12 columns tự xây dựng
+- [x] Không sử dụng framework CSS ngoài (Bootstrap, Tailwind,...)
+- [x] Không viết CSS inline hoặc `<style>` nhúng trong HTML
+- [x] Responsive theo chiến lược Desktop-first: Desktop / Tablet / Mobile
+- [x] Ảnh được lưu local trong `img/`, không dùng link ảnh ngoài
+- [x] Ảnh đã được resize và nén trước khi sử dụng
+- [x] Đường dẫn tương đối (`./`) đảm bảo hoạt động đúng khi deploy GitHub Pages
+- [x] Không để file thừa, file trống hoặc chưa hoàn thiện
+- [x] Code được format gọn gàng, dễ đọc
+
+## 📌 Checklist trước khi nộp bài
+
+- [x] Đã tạo đủ số trang HTML theo thiết kế
+- [x] Đã đặt đúng tên file như yêu cầu
+- [x] Đã chia folder đúng cấu trúc (`css/`, `img/`, `src/`,...)
+- [x] Không có lỗi hoặc warning khi kiểm tra với W3C
+- [x] Đã resize và nén ảnh trước khi đưa vào project
+- [x] Giao diện hiển thị đúng thiết kế
+- [x] Responsive tốt trên Desktop, Tablet, Mobile
+- [x] Không dùng CSS framework ngoài
+- [x] Không dùng ảnh từ link ngoài
+- [x] Không để lại file trống, file thừa hoặc chưa dùng
+- [x] Mã nguồn rõ ràng, dễ đọc, được format hợp lý
+- [x] Push code đầy đủ lên GitHub
+- [x] Deploy thành công với GitHub Pages
+
+## 👤 Tác giả
+
+- Học viên khoá F8 Zoom
+- Dự án thực hiện trong khuôn khổ **Module 1: HTML & CSS**
