@@ -5,6 +5,7 @@ Dự án tổng kết Module 1 (HTML & CSS) - xây dựng giao diện website **
 ## 🚀 Demo
 
 - **GitHub Pages:** https://<username>.github.io/f8-zoom-module-1/
+- https://s.f8team.dev/du-an-19
 
 ## 🛠️ Công nghệ sử dụng
 
